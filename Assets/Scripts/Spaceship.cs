@@ -2,15 +2,29 @@ using UnityEngine;
 
 public class Spaceship : MonoBehaviour
 {
+    #region Variables
+    [Header("Engine")]
     public float EnginePower = 10f;
     public float TurnPower = 10f;
+    [Header("Health")]
+    public int HealthMax = 3;
+    public int HealthCurrent;
+    [Header("Bullet")]
+    public GameObject BulletPrefab;
+    public int BulletSpeed = 100;
+    public float FiringRate = 0.33f;
+    private float fireTimer = 0f;
+
+
 
     private Rigidbody2D rb2D;
+    #endregion
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        HealthCurrent = HealthMax;
     }
 
     // Update is called once per frame
@@ -21,8 +35,25 @@ public class Spaceship : MonoBehaviour
 
         ApplyThrust(vertical);
         ApplyTorque(horizontal);
+        Updatefiring();
+
     }
 
+    private void Updatefiring()
+    {
+        bool isFiring = Input.GetButton("Fire1");
+        fireTimer = fireTimer - Time.deltaTime;
+        //other fireTimer -= Time.deltaTime;
+
+
+        if (isFiring == true && fireTimer <= 0)
+        {
+            FireBullet();
+            fireTimer = FiringRate;
+        }
+
+
+    }
     private void ApplyThrust(float amount)
     {
         //Debug.Log("Thrust amout is " + amount);
@@ -37,5 +68,35 @@ public class Spaceship : MonoBehaviour
         rb2D.AddTorque(-torque);
 
 
+    }
+
+    public void TakeDamage(int damage)
+    {
+        // reduce health 1 or damage
+        HealthCurrent = HealthCurrent - damage;
+        //Health -= damge; Other way
+        //if current health death
+        if (HealthCurrent <=0)
+        {
+            Explode();
+        }
+    }
+
+    public void Explode ()
+    {
+        // explode and destroy ship
+        Debug.Log("Game Over");
+        Destroy(gameObject);
+    }
+
+    public void FireBullet()
+    {
+        //create a bullet at spaceship location and rotation
+        GameObject Bullet = Instantiate(BulletPrefab, transform.position, transform.rotation);
+        Rigidbody2D rb = Bullet.GetComponent<Rigidbody2D>();
+        Vector2 force = transform.up * BulletSpeed;
+        rb.AddForce(force);
+    
+    
     }
 }

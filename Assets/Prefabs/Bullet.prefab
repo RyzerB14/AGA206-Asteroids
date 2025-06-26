@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3695419194402093919
+--- !u!1 &6613042472957059783
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 248640554300554970}
-  - component: {fileID: 4524976475732808548}
-  - component: {fileID: 4948709390786928473}
-  - component: {fileID: 6288477869255562866}
-  - component: {fileID: 5618048647488119787}
+  - component: {fileID: 345469594392704393}
+  - component: {fileID: 7830929444498976926}
+  - component: {fileID: 2756563821905536140}
+  - component: {fileID: 7570566699649320241}
+  - component: {fileID: -44634387317731557}
   m_Layer: 0
-  m_Name: Asteroid_Large01
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &248640554300554970
+--- !u!4 &345469594392704393
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3695419194402093919}
+  m_GameObject: {fileID: 6613042472957059783}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 0.28, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4524976475732808548
+--- !u!212 &7830929444498976926
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3695419194402093919}
+  m_GameObject: {fileID: 6613042472957059783}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -79,51 +79,24 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 49758ed6be68e0a4cb7aacb991b9b19c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: b858761c4b0c4b94abee5dc346bef0ac, type: 3}
+  m_Color: {r: 0.7830189, g: 0.18098935, b: 0.05540227, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.12, y: 0.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &4948709390786928473
-Rigidbody2D:
-  serializedVersion: 5
+--- !u!58 &2756563821905536140
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3695419194402093919}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!60 &6288477869255562866
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3695419194402093919}
+  m_GameObject: {fileID: 6613042472957059783}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -147,53 +120,50 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.0554108, y: 0.2928355}
-      - {x: -0.08309719, y: 0.22343095}
-      - {x: -0.12585004, y: 0.22420809}
-      - {x: -0.23160504, y: 0.1261028}
-      - {x: -0.23613505, y: -0.05629677}
-      - {x: -0.27261052, y: -0.0828111}
-      - {x: -0.27150998, y: -0.19453314}
-      - {x: -0.18543874, y: -0.23745322}
-      - {x: -0.14320004, y: -0.23226212}
-      - {x: -0.097682424, y: -0.27592677}
-      - {x: 0.008873168, y: -0.274728}
-      - {x: 0.04687074, y: -0.24380113}
-      - {x: 0.06595527, y: -0.24801803}
-      - {x: 0.076355636, y: -0.2575392}
-      - {x: 0.17999607, y: -0.25553924}
-      - {x: 0.25434005, y: -0.15065093}
-      - {x: 0.25260678, y: 0.07953238}
-      - {x: 0.23583832, y: 0.11037323}
-      - {x: 0.23527804, y: 0.24745205}
-      - {x: 0.1781527, y: 0.29226136}
-  m_UseDelaunayMesh: 0
---- !u!114 &5618048647488119787
+  m_Radius: 0.05
+--- !u!50 &7570566699649320241
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613042472957059783}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-44634387317731557
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3695419194402093919}
+  m_GameObject: {fileID: 6613042472957059783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 758162297342cf948b5c58e1b05da44b, type: 3}
+  m_Script: {fileID: 11500000, guid: e8dcb789b10f3fe449a21777ad47841b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionDamage: 1
+  Damage: 1
+  ExplosionPrefab: {fileID: 1843204157240849611, guid: a5a5f181636e51b4588e2174942b3352, type: 3}
