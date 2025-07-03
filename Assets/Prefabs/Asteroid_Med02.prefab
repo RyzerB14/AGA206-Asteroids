@@ -189,4 +189,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758162297342cf948b5c58e1b05da44b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealthMax: 3
+  HealthCurrent: 0
   CollisionDamage: 1
+  chunks:
+  - {fileID: 1035445765380843532}
+  ChunksMin: 0
+  ChunksMax: 4
+  ExplodeDist: 0.5
+  ExplosionForce: 10
