@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class Asteroids : MonoBehaviour
 {
+    [Range(1,3)]
+    public int SpawnValue = 3;
+    [Space]
     public int HealthMax = 3;
     public int HealthCurrent;
     public int CollisionDamage = 1;

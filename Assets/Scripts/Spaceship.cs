@@ -14,7 +14,9 @@ public class Spaceship : MonoBehaviour
     public int BulletSpeed = 100;
     public float FiringRate = 0.33f;
     private float fireTimer = 0f;
-
+    [Header("Sound")]
+    public SoundPlayer HitSound;
+    public SoundPlayer DieSound;
 
 
     private Rigidbody2D rb2D;
@@ -72,6 +74,9 @@ public class Spaceship : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+
+
+        HitSound.PlaySound();
         // reduce health 1 or damage
         HealthCurrent = HealthCurrent - damage;
         //Health -= damge; Other way
@@ -84,9 +89,11 @@ public class Spaceship : MonoBehaviour
 
     public void Explode ()
     {
+        DieSound.PlaySound();
         // explode and destroy ship
         Debug.Log("Game Over");
         Destroy(gameObject);
+
     }
 
     public void FireBullet()

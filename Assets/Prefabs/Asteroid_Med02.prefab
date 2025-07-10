@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4305839435216041505}
   - component: {fileID: 8233773506815461324}
   - component: {fileID: -6929220136961046155}
+  - component: {fileID: 6106368899259575252}
   m_Layer: 0
   m_Name: Asteroid_Med02
   m_TagString: Untagged
@@ -189,12 +190,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758162297342cf948b5c58e1b05da44b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnValue: 3
   HealthMax: 3
   HealthCurrent: 0
   CollisionDamage: 1
-  chunks:
-  - {fileID: 1035445765380843532}
+  chunks: []
   ChunksMin: 0
   ChunksMax: 4
   ExplodeDist: 0.5
   ExplosionForce: 10
+--- !u!114 &6106368899259575252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035445765380843532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b94aceacbfe7a948996dde3b9921c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
