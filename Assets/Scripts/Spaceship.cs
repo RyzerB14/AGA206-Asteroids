@@ -17,7 +17,8 @@ public class Spaceship : MonoBehaviour
     [Header("Sound")]
     public SoundPlayer HitSound;
     public SoundPlayer DieSound;
-
+    [Header("UI")]
+    public ScreenFlash Flash;
 
     private Rigidbody2D rb2D;
     #endregion
@@ -74,7 +75,7 @@ public class Spaceship : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-
+        StartCoroutine(Flash.FlashRoutine());
 
         HitSound.PlaySound();
         // reduce health 1 or damage

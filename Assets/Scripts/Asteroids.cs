@@ -28,15 +28,16 @@ public class Asteroids : MonoBehaviour
         //Debug.Log(Chunks.Lenght);
 
     }
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)//GetSpaceShip And Is It Colliding with Asteroid
     {
         Spaceship ship = collision.gameObject.GetComponent<Spaceship>();
         if(ship != null)
         {
             ship.TakeDamage(CollisionDamage);
         }
+        
     }
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage)//Take Damage
     {
 
         HealthCurrent -= damage;
@@ -45,7 +46,7 @@ public class Asteroids : MonoBehaviour
             Explode();
         }
     }
-    private void Explode()
+    private void Explode()//Explode the asteroids
     {
         int numChunks = Random.Range(ChunksMin, ChunksMax + 1 );
         
@@ -59,7 +60,7 @@ public class Asteroids : MonoBehaviour
      Destroy(gameObject);
 
     }
-    private void CreateAsteroidChunks()
+    private void CreateAsteroidChunks()//Spawn asteroids Chunks With Arrays
     {
         if (chunks == null || chunks.Length == 0)
             return;
