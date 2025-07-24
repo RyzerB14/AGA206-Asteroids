@@ -20,6 +20,10 @@ public class Spaceship : MonoBehaviour
     [Header("UI")]
     public ScreenFlash Flash;
 
+    public int Score = 0;
+    public GameOverUI GameOverUI;
+
+
     private Rigidbody2D rb2D;
     #endregion
 
@@ -93,6 +97,7 @@ public class Spaceship : MonoBehaviour
         DieSound.PlaySound();
         // explode and destroy ship
         Debug.Log("Game Over");
+        GameOver();
         Destroy(gameObject);
 
     }
@@ -107,4 +112,26 @@ public class Spaceship : MonoBehaviour
     
     
     }
+
+    public int GetHighScore()
+    {
+        return PlayerPrefs.GetInt("Hiscore", 0);
+    }
+
+    public void SetHighScore(int score)
+    {
+        PlayerPrefs.SetInt("Hiscore", score);
+    }
+
+    public void GameOver()
+    {
+        bool celebrateHighScore = false;
+        if(Score > GetHighScore() && celebrateHighScore == false)
+        {
+            SetHighScore(Score);
+            celebrateHighScore = true;
+        }
+        GameOverUI.Show(celebrateHighScore,Score, GetHighScore());
+    }
+
 }
