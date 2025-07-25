@@ -33,7 +33,7 @@ public class GameOverUI : MonoBehaviour
     }
     public void ClickMainMenu()
     {
-        SceneManager.LoadScene("TitleScreenUI");
+        SceneManager.LoadScene("Title");
     }
 
 }

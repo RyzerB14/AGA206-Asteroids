@@ -38,7 +38,7 @@ public class SpawnManager : MonoBehaviour
         GameObject asteroidRef = AsteroidRefs[asteroidIndex];
         //find random spawn
         Vector3 spawnPoint = new Vector3(Random.Range(-10, 10), Random.Range(-5, 5), 0);
-        spawnPoint.z = transform.position.z;
+        //spawnPoint.z = transform.position.z;
         GameObject Asteroid = Instantiate(asteroidRef, spawnPoint, transform.rotation);
 
         Vector2 force = PushDirection(spawnPoint) * PushForce;

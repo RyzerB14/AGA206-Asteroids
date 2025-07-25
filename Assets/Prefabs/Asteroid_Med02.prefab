@@ -191,14 +191,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnValue: 3
-  HealthMax: 3
+  HealthMax: 2
   HealthCurrent: 0
   CollisionDamage: 1
   chunks: []
   ChunksMin: 0
   ChunksMax: 4
   ExplodeDist: 0.5
-  ExplosionForce: 10
+  ExplosionForce: 100
+  ScoreValue: 10
 --- !u!114 &6106368899259575252
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1098,7 +1098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60ac590c04618184686c1ddcecebc1dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnginePower: 40
+  EnginePower: 60
   TurnPower: 8
   HealthMax: 3
   HealthCurrent: 0
@@ -1107,6 +1107,7 @@ MonoBehaviour:
   FiringRate: 0.33
   HitSound: {fileID: 737134161}
   DieSound: {fileID: 737134159}
+  Shake: {fileID: 1075686192}
   Flash: {fileID: 1368028898}
   Score: 0
   GameOverUI: {fileID: 564424064}
@@ -1199,8 +1200,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5606576c8791414439c4d155d2371d72, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5606576c8791414439c4d155d2371d72, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1473,6 +1474,7 @@ GameObject:
   - component: {fileID: 1075686189}
   - component: {fileID: 1075686188}
   - component: {fileID: 1075686191}
+  - component: {fileID: 1075686192}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1598,6 +1600,44 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1075686192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075686187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3375a50aca5be94ca755c2b82d627f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.1
+  Start: 1
+  Curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.1833334
+      value: 1.0011904
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.1624999
+      value: 1.0011904
+      inSlope: -0.075630374
+      outSlope: -0.075630374
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.10526306
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1218161664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,8 +1913,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -646, y: -473}
-  m_SizeDelta: {x: 507.412, y: 192.335}
+  m_AnchoredPosition: {x: -583, y: -466}
+  m_SizeDelta: {x: 650.412, y: 192.335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1376082734
 MonoBehaviour:
@@ -2009,7 +2049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -118, y: -65}
   m_SizeDelta: {x: 600, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1511979434
@@ -2032,10 +2072,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: RyAsteroids
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d5564f4af43d5a3499855d429e584f58, type: 2}
+  m_sharedMaterial: {fileID: 6888681519971116498, guid: d5564f4af43d5a3499855d429e584f58, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2059,8 +2099,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 125
+  m_fontSizeBase: 125
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2075,7 +2115,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
+  m_TextWrappingMode: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -2097,7 +2137,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -77.75189, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2193,7 +2233,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1597785584}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 564424064}
+        m_TargetAssemblyTypeName: GameOverUI, Assembly-CSharp
+        m_MethodName: ClickMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1597785584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2320,7 +2372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Celebrate
+  m_text: LetsGOOOOOOOOOOOOOOO!!!!! New HighScore
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d5564f4af43d5a3499855d429e584f58, type: 2}
   m_sharedMaterial: {fileID: 6888681519971116498, guid: d5564f4af43d5a3499855d429e584f58, type: 2}
@@ -2385,7 +2437,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -36.0847, w: 0}
+  m_margin: {x: 0, y: 0, z: -874.1084, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2415,7 +2467,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -646, y: -104}
+  m_AnchoredPosition: {x: -583, y: -94}
   m_SizeDelta: {x: 507.412, y: 192.335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1910872071
@@ -2757,7 +2809,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2078446098}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 564424064}
+        m_TargetAssemblyTypeName: GameOverUI, Assembly-CSharp
+        m_MethodName: ClickPlayAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2078446098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2819,6 +2883,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8402100819710682197, guid: 8f49f4025109d25469559ca4de9b205c, type: 3}
+      propertyPath: chunks.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8402100819710682197, guid: 8f49f4025109d25469559ca4de9b205c, type: 3}
       propertyPath: 'Chucks.Array.data[0]'
       value: 
       objectReference: {fileID: 3823194237735265019, guid: 0459b796fad5e2c428c3d1a7c85e954c, type: 3}
@@ -2828,6 +2896,18 @@ PrefabInstance:
       objectReference: {fileID: 1753207198734808465, guid: b501e75b6e0558e478a73c264f660e4f, type: 3}
     - target: {fileID: -8402100819710682197, guid: 8f49f4025109d25469559ca4de9b205c, type: 3}
       propertyPath: 'Chucks.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2990041252005558701, guid: a96cfae32d3e4564db502a240b1aa3b3, type: 3}
+    - target: {fileID: -8402100819710682197, guid: 8f49f4025109d25469559ca4de9b205c, type: 3}
+      propertyPath: 'chunks.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3823194237735265019, guid: 0459b796fad5e2c428c3d1a7c85e954c, type: 3}
+    - target: {fileID: -8402100819710682197, guid: 8f49f4025109d25469559ca4de9b205c, type: 3}
+      propertyPath: 'chunks.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1753207198734808465, guid: b501e75b6e0558e478a73c264f660e4f, type: 3}
+    - target: {fileID: -8402100819710682197, guid: 8f49f4025109d25469559ca4de9b205c, type: 3}
+      propertyPath: 'chunks.Array.data[3]'
       value: 
       objectReference: {fileID: 2990041252005558701, guid: a96cfae32d3e4564db502a240b1aa3b3, type: 3}
     - target: {fileID: 103747279830113809, guid: 8f49f4025109d25469559ca4de9b205c, type: 3}
@@ -3443,6 +3523,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -669425350253309134, guid: b758efb41cdd3bf4ba977bf4475b038d, type: 3}
+      propertyPath: chunks.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -669425350253309134, guid: b758efb41cdd3bf4ba977bf4475b038d, type: 3}
       propertyPath: 'Chucks.Array.data[0]'
       value: 
       objectReference: {fileID: 3823194237735265019, guid: 0459b796fad5e2c428c3d1a7c85e954c, type: 3}
@@ -3452,6 +3536,18 @@ PrefabInstance:
       objectReference: {fileID: 1753207198734808465, guid: b501e75b6e0558e478a73c264f660e4f, type: 3}
     - target: {fileID: -669425350253309134, guid: b758efb41cdd3bf4ba977bf4475b038d, type: 3}
       propertyPath: 'Chucks.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2990041252005558701, guid: a96cfae32d3e4564db502a240b1aa3b3, type: 3}
+    - target: {fileID: -669425350253309134, guid: b758efb41cdd3bf4ba977bf4475b038d, type: 3}
+      propertyPath: 'chunks.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3823194237735265019, guid: 0459b796fad5e2c428c3d1a7c85e954c, type: 3}
+    - target: {fileID: -669425350253309134, guid: b758efb41cdd3bf4ba977bf4475b038d, type: 3}
+      propertyPath: 'chunks.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1753207198734808465, guid: b501e75b6e0558e478a73c264f660e4f, type: 3}
+    - target: {fileID: -669425350253309134, guid: b758efb41cdd3bf4ba977bf4475b038d, type: 3}
+      propertyPath: 'chunks.Array.data[2]'
       value: 
       objectReference: {fileID: 2990041252005558701, guid: a96cfae32d3e4564db502a240b1aa3b3, type: 3}
     - target: {fileID: 6859752919362976930, guid: b758efb41cdd3bf4ba977bf4475b038d, type: 3}

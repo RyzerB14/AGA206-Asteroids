@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System.Net.NetworkInformation;
 
 public class Spaceship : MonoBehaviour
 {
@@ -18,6 +21,7 @@ public class Spaceship : MonoBehaviour
     public SoundPlayer HitSound;
     public SoundPlayer DieSound;
     [Header("UI")]
+    public ShakeCamera Shake;
     public ScreenFlash Flash;
 
     public int Score = 0;
@@ -43,6 +47,12 @@ public class Spaceship : MonoBehaviour
         ApplyThrust(vertical);
         ApplyTorque(horizontal);
         Updatefiring();
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            PlayerPrefs.DeleteAll();
+            //PlayerPefs.Get
+        }
 
     }
 
@@ -80,8 +90,11 @@ public class Spaceship : MonoBehaviour
     public void TakeDamage(int damage)
     {
         StartCoroutine(Flash.FlashRoutine());
-
+        
+        StartCoroutine(Shake.ShakeRoutine());
+       
         HitSound.PlaySound();
+      
         // reduce health 1 or damage
         HealthCurrent = HealthCurrent - damage;
         //Health -= damge; Other way

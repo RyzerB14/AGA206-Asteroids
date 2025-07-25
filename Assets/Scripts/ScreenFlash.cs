@@ -9,12 +9,12 @@ public class ScreenFlash : MonoBehaviour
     private Image flashImage;
     private Color ImageColor;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
-        flashImage = GetComponent<Image>();
-        ImageColor = flashImage.color;
-        StartCoroutine(FlashRoutine());
+       flashImage = GetComponent<Image>();
+       ImageColor = flashImage.color;
+      // StartCoroutine(FlashRoutine());
     }
 
     public IEnumerator FlashRoutine()
