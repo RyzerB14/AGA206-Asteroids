@@ -30,6 +30,7 @@ public class Spaceship : MonoBehaviour
 
     private Rigidbody2D rb2D;
     #endregion
+    public bool SpaceShip1 = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -41,18 +42,31 @@ public class Spaceship : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        if (SpaceShip1 == true)
+        {
+            float horizontalArrow = Input.GetAxis("HorizontalArrow");
+            float verticalArrow = Input.GetAxis("VerticalArrow");
 
-        ApplyThrust(vertical);
-        ApplyTorque(horizontal);
+            ApplyThrust(verticalArrow);
+            ApplyTorque(horizontalArrow);
+        }
+
+        else
+        {
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
+
+
+            ApplyThrust(vertical);
+            ApplyTorque(horizontal);
+
+        }
+  
+
         Updatefiring();
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            PlayerPrefs.DeleteAll();
-            //PlayerPefs.Get
-        }
+ 
+        
 
     }
 
@@ -79,9 +93,9 @@ public class Spaceship : MonoBehaviour
     }
 
 
-    private void ApplyTorque(float amout)
+    private void ApplyTorque(float amount)
     {
-        float torque = amout * TurnPower * Time.deltaTime;
+        float torque = amount * TurnPower * Time.deltaTime;
         rb2D.AddTorque(-torque);
 
 
