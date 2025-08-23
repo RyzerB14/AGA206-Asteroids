@@ -13,5 +13,18 @@ public class TitleScreenUI : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
     }
+
+    public void ClickPVP()
+    {
+        SceneManager.LoadScene("PVP");
+    }
+
+    public void ClickRace()
+    {
+        SceneManager.LoadScene("RaceGame");
+    }
+
+
 }
+
 
