@@ -1165,6 +1165,14 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 962431384}
+    - target: {fileID: 4871314715158738445, guid: 15235eae239bb3e4a8e6ab441a1d57f5, type: 3}
+      propertyPath: ToprespawnPoint
+      value: 
+      objectReference: {fileID: 470629566}
+    - target: {fileID: 4871314715158738445, guid: 15235eae239bb3e4a8e6ab441a1d57f5, type: 3}
+      propertyPath: BottomrespawnPoint
+      value: 
+      objectReference: {fileID: 962431384}
     - target: {fileID: 6245681281850871022, guid: 15235eae239bb3e4a8e6ab441a1d57f5, type: 3}
       propertyPath: m_Name
       value: Spaceship 2
@@ -7526,6 +7534,14 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 470629566}
+    - target: {fileID: 4871314715158738445, guid: 15235eae239bb3e4a8e6ab441a1d57f5, type: 3}
+      propertyPath: ToprespawnPoint
+      value: 
+      objectReference: {fileID: 470629566}
+    - target: {fileID: 4871314715158738445, guid: 15235eae239bb3e4a8e6ab441a1d57f5, type: 3}
+      propertyPath: BottomrespawnPoint
+      value: 
+      objectReference: {fileID: 962431384}
     - target: {fileID: 6245681281850871022, guid: 15235eae239bb3e4a8e6ab441a1d57f5, type: 3}
       propertyPath: m_Name
       value: Spaceship
