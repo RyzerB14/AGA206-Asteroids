@@ -419,7 +419,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 539478112}
         m_TargetAssemblyTypeName: TitleScreenUI, Assembly-CSharp
-        m_MethodName: ClickPlay
+        m_MethodName: ClickRace
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1960,5 +1960,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 404991979}
-  - {fileID: 539478111}
   - {fileID: 201849512}
+  - {fileID: 539478111}

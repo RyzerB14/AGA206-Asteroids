@@ -31,6 +31,9 @@ public class Spaceship : MonoBehaviour
     private Rigidbody2D rb2D;
     #endregion
     public bool SpaceShip1 = true;
+    public GameObject player;
+    public Transform respawnPoint;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -115,7 +118,17 @@ public class Spaceship : MonoBehaviour
         //if current health death
         if (HealthCurrent <=0)
         {
-            Explode();
+           if (gameObject.CompareTag("SpaceShip1"))
+            {
+                player.transform.position = respawnPoint.position;
+                HealthCurrent = HealthMax;
+            }
+           if (gameObject.CompareTag("SpaceShip2"))
+            {
+                player.transform.position = respawnPoint.position;
+                HealthCurrent = HealthMax;
+            }
+            //Explode();
         }
     }
 

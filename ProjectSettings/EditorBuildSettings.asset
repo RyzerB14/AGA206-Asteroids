@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Asteroids.unity
     guid: d0e5bf2f616edd04ea5572f0b914326d
+  - enabled: 1
+    path: Assets/Scenes/PVP.unity
+    guid: dead206aa060b9c448f0601d7b919c20
+  - enabled: 1
+    path: Assets/Scenes/RaceGame.unity
+    guid: 0c072cd9f9997f3489b6a760a8a8c88e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
