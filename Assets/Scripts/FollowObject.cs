@@ -6,6 +6,8 @@ public class FollowObject : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+        transform.position = new Vector3(ObjectToFollow.transform.position.x, ObjectToFollow.transform.position.y, transform.position.z);
         
     }
 
@@ -13,6 +15,7 @@ public class FollowObject : MonoBehaviour
     void Update()
     {
 
-        transform.position = new Vector3(ObjectToFollow.transform.position.x, transform.position.y, transform.position.z);
+        transform.position = new Vector3(ObjectToFollow.transform.position.x, ObjectToFollow.transform.position.y, transform.position.z);
+        
     }
 }
