@@ -648,15 +648,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6245681281850871022, guid: 15235eae239bb3e4a8e6ab441a1d57f5, type: 3}
       propertyPath: m_TagString
-      value: SpaceShip2
+      value: pvp2
       objectReference: {fileID: 0}
     - target: {fileID: 8387943521272299029, guid: 15235eae239bb3e4a8e6ab441a1d57f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.74
+      value: -10.9
       objectReference: {fileID: 0}
     - target: {fileID: 8387943521272299029, guid: 15235eae239bb3e4a8e6ab441a1d57f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.37
+      value: 8.8
       objectReference: {fileID: 0}
     - target: {fileID: 8387943521272299029, guid: 15235eae239bb3e4a8e6ab441a1d57f5, type: 3}
       propertyPath: m_LocalPosition.z

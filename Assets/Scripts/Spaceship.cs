@@ -75,16 +75,47 @@ public class Spaceship : MonoBehaviour
 
     private void Updatefiring()
     {
-        bool isFiring = Input.GetButton("Fire1");
+        
+        if (SpaceShip1 == true)
+        {
+            bool isFiring = Input.GetButton("Fire3");
         fireTimer = fireTimer - Time.deltaTime;
         //other fireTimer -= Time.deltaTime;
 
-
-        if (isFiring == true && fireTimer <= 0)
-        {
-            FireBullet();
-            fireTimer = FiringRate;
+            if (isFiring == true && fireTimer <= 0)
+            {
+                FireBullet();
+                fireTimer = FiringRate;
+            }
         }
+        if (SpaceShip1 == false)
+        {
+            bool isFiring = Input.GetButton("Fire2");
+            fireTimer = fireTimer - Time.deltaTime;
+            //other fireTimer -= Time.deltaTime;
+
+            if (isFiring == true && fireTimer <= 0)
+            {
+                FireBullet();
+                fireTimer = FiringRate;
+            }
+        }
+        else
+        {
+            bool isFiring = Input.GetButton("Fire1");
+            fireTimer = fireTimer - Time.deltaTime;
+            //other fireTimer -= Time.deltaTime;
+
+            if (isFiring == true && fireTimer <= 0)
+            {
+                FireBullet();
+                fireTimer = FiringRate;
+            }
+        }
+
+
+
+
 
 
     }
@@ -118,7 +149,7 @@ public class Spaceship : MonoBehaviour
         //if current health death
         if (HealthCurrent <=0)
         {
-           if (gameObject.CompareTag("SpaceShip1"))
+           if (gameObject.CompareTag("SpaceShip0"))
             {
                 player.transform.position = respawnPoint.position;
                 HealthCurrent = HealthMax;
@@ -131,7 +162,7 @@ public class Spaceship : MonoBehaviour
 
             else
             {
-                Explode();
+               Explode();
             }
         }
     }

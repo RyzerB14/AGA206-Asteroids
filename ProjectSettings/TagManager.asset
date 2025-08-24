@@ -8,6 +8,7 @@ TagManager:
   - SpaceShip2
   - pvp1
   - pvp2
+  - SpaceShip0
   layers:
   - Default
   - TransparentFX

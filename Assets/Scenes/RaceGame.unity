@@ -1272,7 +1272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &564424059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6843,7 +6843,7 @@ GameObject:
   - component: {fileID: 2078446097}
   m_Layer: 5
   m_Name: PlayAgainButton
-  m_TagString: Untagged
+  m_TagString: SpaceShip1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7532,7 +7532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6245681281850871022, guid: 15235eae239bb3e4a8e6ab441a1d57f5, type: 3}
       propertyPath: m_TagString
-      value: SpaceShip1
+      value: SpaceShip0
       objectReference: {fileID: 0}
     - target: {fileID: 6467077219076465123, guid: 15235eae239bb3e4a8e6ab441a1d57f5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
