@@ -6,6 +6,8 @@ TagManager:
   tags:
   - SpaceShip1
   - SpaceShip2
+  - pvp1
+  - pvp2
   layers:
   - Default
   - TransparentFX

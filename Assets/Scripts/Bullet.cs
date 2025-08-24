@@ -5,7 +5,6 @@ public class Bullet : MonoBehaviour
     public int Damage = 1;
     public GameObject ExplosionPrefab;
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Asteroids asteroids = collision.gameObject.GetComponent<Asteroids>();
@@ -13,6 +12,15 @@ public class Bullet : MonoBehaviour
         {
             asteroids.TakeDamage(Damage);
             Explode();
+        }
+        Spaceship ship = collision.gameObject.GetComponent<Spaceship>();
+        if (ship != null)
+        {
+            if (ship.CompareTag("pvp2"))
+            {
+                ship.TakeDamage(Damage);
+
+            } 
         }
     }
 

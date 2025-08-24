@@ -128,7 +128,11 @@ public class Spaceship : MonoBehaviour
                 player.transform.position = respawnPoint.position;
                 HealthCurrent = HealthMax;
             }
-            //Explode();
+
+            else
+            {
+                Explode();
+            }
         }
     }
 

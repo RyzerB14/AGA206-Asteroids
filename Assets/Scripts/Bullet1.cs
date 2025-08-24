@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet1 : MonoBehaviour
 {
     public int Damage = 1;
     public GameObject ExplosionPrefab;
@@ -13,6 +13,14 @@ public class Bullet : MonoBehaviour
         {
             asteroids.TakeDamage(Damage);
             Explode();
+        }
+        Spaceship ship = collision.gameObject.GetComponent<Spaceship>();
+        if (ship != null)
+        {
+            if (ship.CompareTag("pvp1"))
+            {
+                ship.TakeDamage(Damage);
+            }
         }
     }
 
