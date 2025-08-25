@@ -684,6 +684,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2845ecce661970a4586df3eb20a614a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Asteroids: 0
+  PVP: 0
+  Race: 0
   ScoreTextBox: {fileID: 633639572}
   HighScoreTextBox: {fileID: 1376082734}
   GameOverPanel: {fileID: 1363758498}
@@ -965,11 +968,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664315401}
   m_CullTransparentMesh: 1
---- !u!4 &737134154 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8387943521272299029, guid: 15235eae239bb3e4a8e6ab441a1d57f5, type: 3}
-  m_PrefabInstance: {fileID: 5488263848426918328}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &754388540 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1294076538689799590, guid: 0459b796fad5e2c428c3d1a7c85e954c, type: 3}
@@ -1145,7 +1143,6 @@ GameObject:
   - component: {fileID: 1075686188}
   - component: {fileID: 1075686191}
   - component: {fileID: 1075686192}
-  - component: {fileID: 1075686193}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1309,19 +1306,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1075686193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075686187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 605e735b924605848888e1ab78e93788, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToFollow: {fileID: 737134154}
 --- !u!1 &1218161664
 GameObject:
   m_ObjectHideFlags: 0

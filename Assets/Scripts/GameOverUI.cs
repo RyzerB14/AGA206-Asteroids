@@ -4,7 +4,9 @@ using TMPro;
 using UnityEngine.SceneManagement;
 public class GameOverUI : MonoBehaviour
 {
-
+    public bool Asteroids;
+    public bool PVP;
+    public bool Race;
     public TMP_Text ScoreTextBox, HighScoreTextBox;
     public GameObject GameOverPanel;
     public GameObject Celebrate;
@@ -28,8 +30,18 @@ public class GameOverUI : MonoBehaviour
     }
 
     public void ClickPlayAgain()
-    {
-        SceneManager.LoadScene("Asteroids"); 
+    {if(Asteroids == true)
+        { 
+         SceneManager.LoadScene("Asteroids"); 
+        }
+     if(PVP == true)
+        {
+         SceneManager.LoadScene("PVP");
+        }   
+     if(Race == true)
+        {
+         SceneManager.LoadScene("RaceGame");
+        }
     }
     public void ClickMainMenu()
     {

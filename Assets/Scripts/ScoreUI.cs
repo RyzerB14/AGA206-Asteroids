@@ -16,5 +16,6 @@ public class ScoreUI : MonoBehaviour
         {
             ScoreTextBox.text = ship.Score.ToString();
         }
+
     }
 }
