@@ -200,6 +200,14 @@ public class Spaceship : MonoBehaviour
 
     public void GameOver()
     {
+        GameObject SpaceShip1 = GameObject.FindWithTag("SpaceShip1");
+        {
+            if (SpaceShip1 != null)
+            {
+                Debug.Log("Player2wins");
+            }
+        }
+
         bool celebrateHighScore = false;
         if(Score > GetHighScore() && celebrateHighScore == false)
         {
