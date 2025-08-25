@@ -1272,7 +1272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &564424059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1384,10 +1384,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2845ecce661970a4586df3eb20a614a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Asteroids: 0
+  PVP: 0
+  Race: 0
   ScoreTextBox: {fileID: 633639572}
   HighScoreTextBox: {fileID: 1376082734}
   GameOverPanel: {fileID: 1363758498}
   Celebrate: {fileID: 1907162674}
+  Winner: {fileID: 0}
 --- !u!114 &564424065
 MonoBehaviour:
   m_ObjectHideFlags: 0

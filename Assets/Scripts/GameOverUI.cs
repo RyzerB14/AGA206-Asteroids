@@ -10,6 +10,7 @@ public class GameOverUI : MonoBehaviour
     public TMP_Text ScoreTextBox, HighScoreTextBox;
     public GameObject GameOverPanel;
     public GameObject Celebrate;
+    public GameObject Winner;
     void Start()
     {
         Hide();
@@ -47,5 +48,11 @@ public class GameOverUI : MonoBehaviour
     {
         SceneManager.LoadScene("Title");
     }
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Title");
+        }
+    }
 }
