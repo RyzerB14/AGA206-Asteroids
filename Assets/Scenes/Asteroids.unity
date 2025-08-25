@@ -684,7 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2845ecce661970a4586df3eb20a614a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Asteroids: 0
+  Asteroids: 1
   PVP: 0
   Race: 0
   ScoreTextBox: {fileID: 633639572}
